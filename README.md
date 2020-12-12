@@ -1,5 +1,7 @@
 # Stylemarin
-SubmarinのCSSです(?)
+[Submarin](https://submarin.online)をモチーフとした公式スタイルシートです
+
+[SubmarinOffitialWeb](https://about.submarin.online)で使用予定です
 
 ## Install
 index.htmlがあるディレクトリで
