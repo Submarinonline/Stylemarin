@@ -1,21 +1,26 @@
 /* Stylemarin v0.0.1 | MIT License | github.com/Submarinonline/Stylemarin */
 
+/*font*/
+
 @font-face {
-  font-family: 'SourceHanSans';
-  src: url(/css/fonts/SourceHanSans/SourceHanSansJP-Regular.otf);
+  font-family: 'GenShinGothic';
+  src: url(/css/fonts/GenShinGothic/GenShinGothic-Regular.ttf);
 }
+
+/*root,tag*/
 
 :root {
   --color: #000000DE;
   --primaly-color: #41ADEF;
   --bg-color: #FCFCFC;
+  --button-h-color: #F0F0F0;
 }
 
 html {
   color: var(--color);
   background-color: var(--bg-color);
   font-size: 93.75%;
-  font-family: SourceHanSans;
+  font-family: GenShinGothic;
 }
 
 button {
@@ -24,37 +29,76 @@ button {
   -ms-progress-appearance: none;
   appearance: none;
   border: 0;
-  border-radius: 100px;
+  border-radius: 1rem;
   color: var(--color);
   background: var(--bg-color);
   min-width: 5rem;
   padding: 0.5rem 1.25rem;
   margin: 0.5rem 0.7rem 0.5rem 0;
   font-size: 1rem;
+  line-height: 1rem;
   cursor: pointer;
+  transform: scale(1, 1);
+  transition: 0.2s ease-out;
+  position: relative;
+}
+
+button::after {
+  content: "";
+  position: absolute;
+  top: -1px;
+  left: -1px;
+  width: calc(100% + 2px);
+  height: calc(100% + 2px);
+  border: 0;
+  border-radius: 1rem;
+  display: block;
+  transition: 0.2s ease-out;
 }
 
 button:focus {
-  outline: none;
+  outline-style: none;
+}
+
+button:focus::after {
+  background-color: #FCFCFCAF;
+}
+
+button:active {
+  transform: scale(0.9, 0.9);
 }
 
 button.shadow {
   box-shadow:
     4px 4px 15px 0 #2020A030,
     inset 4px 4px 15px 0 transparent;
-  transition: box-shadow 0.5s ease;
+  background: var(--bg-color);
 }
 
 button.shadow:hover {
   box-shadow:
     4px 4px 15px 0 transparent,
-    inset 4px 4px 15px 0 #2020A040;
+    inset 4px 4px 15px 0 #2020A030;
+  background: var(--button-h-color);
 }
 
+button.icon {
+  position: relative;
+  padding-left: 3rem;
+}
+
+button.icon>span {
+  position: absolute;
+  left: 0.5rem;
+  width: 2rem;
+  box-sizing: border-box
+}
+
+/*class ~decoration~*/
 
 .outline {
   color: var(--primaly-color);
-  border: 1.5px;
+  border: 1px;
   border-style: solid;
   border-color: var(--primaly-color);
 }
@@ -63,6 +107,8 @@ button.shadow:hover {
   color: var(--bg-color);
   background-color: var(--primaly-color);
 }
+
+/*class ~spacer~*/
 
 .ctr {
   max-width: 960px;
