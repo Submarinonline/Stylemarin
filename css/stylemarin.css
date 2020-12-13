@@ -23,7 +23,18 @@ html {
   font-family: GenShinGothic;
 }
 
-button {
+label {
+  padding: 0.29rem 1.32rem !important;
+}
+
+label>input[type="file"] {
+  display: none;
+}
+
+button,
+input[type="submit"],
+input[type="button"],
+.btn {
   -webkit-appearance: none;
   -moz-appearance: none;
   -ms-progress-appearance: none;
@@ -41,9 +52,13 @@ button {
   transform: scale(1, 1);
   transition: 0.2s ease-out;
   position: relative;
+  box-sizing: border-box;
 }
 
-button::after {
+button::after,
+input[type="submit"]::after,
+input[type="button"]::after,
+.btn::after {
   content: "";
   position: absolute;
   top: -1px;
@@ -56,38 +71,54 @@ button::after {
   transition: 0.2s ease-out;
 }
 
-button:focus {
+button:focus,
+input:focus,
+.btn:focus {
   outline-style: none;
 }
 
-button:focus::after {
+button:focus::after,
+input[type="submit"]:focus::after,
+input[type="button"]:focus::after,
+.btn:focus::after {
   background-color: #FCFCFCAF;
 }
 
-button:active {
+button:active,
+input[type="submit"]:active,
+input[type="button"]:active,
+.btn:active {
   transform: scale(0.9, 0.9);
 }
 
-button.shadow {
+.shadow {
   box-shadow:
     4px 4px 15px 0 #2020A030,
     inset 4px 4px 15px 0 transparent;
-  background: var(--bg-color);
 }
 
-button.shadow:hover {
+button.shadow:hover,
+input[type="submit"].shadow:hover,
+input[type="button"].shadow:hover,
+.btn.shadow:hover {
   box-shadow:
     4px 4px 15px 0 transparent,
     inset 4px 4px 15px 0 #2020A030;
   background: var(--button-h-color);
 }
 
-button.icon {
+button.icon,
+input[type="submit"].icon,
+input[type="button"].icon,
+.btn.icon {
   position: relative;
   padding-left: 3rem;
 }
 
-button.icon>span {
+button.icon>span,
+input[type="submit"].icon>span,
+input[type="button"].icon>span,
+.btn.icon>span {
   position: absolute;
   left: 0.5rem;
   width: 2rem;
@@ -97,10 +128,10 @@ button.icon>span {
 /*class ~decoration~*/
 
 .outline {
-  color: var(--primaly-color);
-  border: 1px;
-  border-style: solid;
-  border-color: var(--primaly-color);
+  color: var(--primaly-color) !important;
+  border: 1px !important;
+  border-style: solid !important;
+  border-color: var(--primaly-color) !important;
 }
 
 .pri {
