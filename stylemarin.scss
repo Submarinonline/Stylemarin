@@ -1,0 +1,130 @@
+/* Stylemarin v0.0.1 | MIT License | github.com/Submarinonline/Stylemarin */
+/*font*/
+@font-face {
+  font-family: 'GenShinGothic';
+  src: url(/css/fonts/GenShinGothic/GenShinGothic-Regular.ttf);
+}
+
+$color: #000000DE;
+$primaly-color: #41ADEF;
+$bg-color: #FCFCFC;
+$button-h-color: #F0F0F0;
+
+/*tag*/
+html {
+  color: $color;
+  background-color: $bg-color;
+  font-size: 93.75%;
+  font-family: GenShinGothic;
+}
+
+label {
+  padding: 0.29rem 1.32rem !important;
+
+  >input[type="file"] {
+    display: none;
+  }
+}
+
+button,
+input[type="submit"],
+input[type="button"],
+.btn {
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  -ms-progress-appearance: none;
+  appearance: none;
+  border: 0;
+  border-radius: 1rem;
+  color: $color;
+  background: $bg-color;
+  min-width: 5rem;
+  padding: 0.5rem 1.25rem;
+  margin: 0.5rem 0.7rem 0.5rem 0;
+  font-size: 1rem;
+  line-height: 1rem;
+  cursor: pointer;
+  transform: scale(1, 1);
+  transition: 0.2s ease-out;
+  position: relative;
+  box-sizing: border-box;
+
+  &::after {
+    content: "";
+    position: absolute;
+    top: -1px;
+    left: -1px;
+    width: calc(100% + 2px);
+    height: calc(100% + 2px);
+    border: 0;
+    border-radius: 1rem;
+    display: block;
+    transition: 0.2s ease-out;
+  }
+
+  &:focus {
+    outline-style: none;
+
+    &::after {
+      background-color: #FCFCFCAF;
+    }
+  }
+
+  &:active {
+    transform: scale(0.9, 0.9);
+  }
+
+  &.shadow:hover {
+    box-shadow:
+      4px 4px 15px 0 transparent,
+      inset 4px 4px 15px 0 #2020A030;
+    background: $button-h-color;
+  }
+
+  &.icon {
+    position: relative;
+    padding-left: 3rem;
+
+    >span {
+      position: absolute;
+      left: 0.5rem;
+      width: 2rem;
+      box-sizing: border-box
+    }
+
+  }
+
+}
+
+/*class decoration*/
+.shadow {
+  box-shadow:
+    4px 4px 15px 0 #2020A030,
+    inset 4px 4px 15px 0 transparent;
+}
+
+.outline {
+  color: $primaly-color !important;
+  border: 1px !important;
+  border-style: solid !important;
+  border-color: $primaly-color !important;
+}
+
+.pri {
+  color: $bg-color;
+  background-color: $primaly-color;
+}
+
+/*class spacer*/
+.ctr {
+  max-width: 960px;
+  width: 100%;
+  margin: 0 auto;
+  padding: 0 1rem;
+  box-sizing: border-box;
+}
+
+.sec {
+  padding-top: 0.5rem;
+  padding-bottom: 0.5rem;
+}

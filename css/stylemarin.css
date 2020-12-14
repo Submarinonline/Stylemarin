@@ -1,24 +1,14 @@
 /* Stylemarin v0.0.1 | MIT License | github.com/Submarinonline/Stylemarin */
-
 /*font*/
-
 @font-face {
   font-family: 'GenShinGothic';
   src: url(/css/fonts/GenShinGothic/GenShinGothic-Regular.ttf);
 }
 
-/*root,tag*/
-
-:root {
-  --color: #000000DE;
-  --primaly-color: #41ADEF;
-  --bg-color: #FCFCFC;
-  --button-h-color: #F0F0F0;
-}
-
+/*tag*/
 html {
-  color: var(--color);
-  background-color: var(--bg-color);
+  color: #000000DE;
+  background-color: #FCFCFC;
   font-size: 93.75%;
   font-family: GenShinGothic;
 }
@@ -27,7 +17,7 @@ label {
   padding: 0.29rem 1.32rem !important;
 }
 
-label>input[type="file"] {
+label > input[type="file"] {
   display: none;
 }
 
@@ -41,18 +31,21 @@ input[type="button"],
   appearance: none;
   border: 0;
   border-radius: 1rem;
-  color: var(--color);
-  background: var(--bg-color);
+  color: #000000DE;
+  background: #FCFCFC;
   min-width: 5rem;
   padding: 0.5rem 1.25rem;
   margin: 0.5rem 0.7rem 0.5rem 0;
   font-size: 1rem;
   line-height: 1rem;
   cursor: pointer;
-  transform: scale(1, 1);
+  -webkit-transform: scale(1, 1);
+          transform: scale(1, 1);
+  -webkit-transition: 0.2s ease-out;
   transition: 0.2s ease-out;
   position: relative;
-  box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
 }
 
 button::after,
@@ -68,11 +61,13 @@ input[type="button"]::after,
   border: 0;
   border-radius: 1rem;
   display: block;
+  -webkit-transition: 0.2s ease-out;
   transition: 0.2s ease-out;
 }
 
 button:focus,
-input:focus,
+input[type="submit"]:focus,
+input[type="button"]:focus,
 .btn:focus {
   outline-style: none;
 }
@@ -88,23 +83,17 @@ button:active,
 input[type="submit"]:active,
 input[type="button"]:active,
 .btn:active {
-  transform: scale(0.9, 0.9);
-}
-
-.shadow {
-  box-shadow:
-    4px 4px 15px 0 #2020A030,
-    inset 4px 4px 15px 0 transparent;
+  -webkit-transform: scale(0.9, 0.9);
+          transform: scale(0.9, 0.9);
 }
 
 button.shadow:hover,
 input[type="submit"].shadow:hover,
 input[type="button"].shadow:hover,
 .btn.shadow:hover {
-  box-shadow:
-    4px 4px 15px 0 transparent,
-    inset 4px 4px 15px 0 #2020A030;
-  background: var(--button-h-color);
+  -webkit-box-shadow: 4px 4px 15px 0 transparent, inset 4px 4px 15px 0 #2020A030;
+          box-shadow: 4px 4px 15px 0 transparent, inset 4px 4px 15px 0 #2020A030;
+  background: #F0F0F0;
 }
 
 button.icon,
@@ -115,38 +104,43 @@ input[type="button"].icon,
   padding-left: 3rem;
 }
 
-button.icon>span,
-input[type="submit"].icon>span,
-input[type="button"].icon>span,
-.btn.icon>span {
+button.icon > span,
+input[type="submit"].icon > span,
+input[type="button"].icon > span,
+.btn.icon > span {
   position: absolute;
   left: 0.5rem;
   width: 2rem;
-  box-sizing: border-box
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
 }
 
-/*class ~decoration~*/
+/*class decoration*/
+.shadow {
+  -webkit-box-shadow: 4px 4px 15px 0 #2020A030, inset 4px 4px 15px 0 transparent;
+          box-shadow: 4px 4px 15px 0 #2020A030, inset 4px 4px 15px 0 transparent;
+}
 
 .outline {
-  color: var(--primaly-color) !important;
+  color: #41ADEF !important;
   border: 1px !important;
   border-style: solid !important;
-  border-color: var(--primaly-color) !important;
+  border-color: #41ADEF !important;
 }
 
 .pri {
-  color: var(--bg-color);
-  background-color: var(--primaly-color);
+  color: #FCFCFC;
+  background-color: #41ADEF;
 }
 
-/*class ~spacer~*/
-
+/*class spacer*/
 .ctr {
   max-width: 960px;
   width: 100%;
   margin: 0 auto;
   padding: 0 1rem;
-  box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
 }
 
 .sec {
