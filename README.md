@@ -12,6 +12,7 @@ index.htmlに
 ```
 <link rel="stylesheet" href="/Stylemarin/css/normalize.css">
 <link rel="stylesheet" href="/Stylemarin/css/stylemarin.css">
+<link rel="stylesheet" href="/css/themify-icons/themify-icons.css">
 ```
 を記述
 
