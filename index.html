@@ -6,7 +6,8 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
   <link rel="stylesheet" href="/css/normalize.css">
-  <link rel="stylesheet" href="/css/stylemarin.css">
+  <link rel="stylesheet" href="/css/inputreset.css">
+  <link rel="stylesheet" href="/css/stylemarin.min.css">
   <link rel="stylesheet" href="/css/themify-icons/themify-icons.css">
 
   <title>Stylemarin Demo</title>
@@ -25,12 +26,44 @@
     <button class="outline shadow">はい</button><button class="outline shadow">いいえ</button><button
       class="icon outline shadow"><span class="ti-cloud-down"></span>ダウンロード</button>
     <form>
+      <input type="file" name="">
       <label class="btn outline shadow" for="fileupload">
-        <input type="file" name="" id="fileupload">
         ファイル
       </label>
       <input class="outline shadow" type="submit" value="送信">
       <input class="outline shadow" type="button" value="ボタン">
+      <select class="outline">
+        <option>A</option>
+        <option>B</option>
+        <option>C</option>
+      </select>
+    </form>
+    <form>
+      <input class="outline" type="color" name="">
+      <input class="outline" type="date" name="">
+      <input class="outline" type="datetime-local" name="">
+      <br>
+      <input class="outline" type="email" name="" placeholder="email">
+      <input class="outline" type="month" name="">
+      <input class="outline" type="number" name="" placeholder="number">
+      <input class="outline" type="password" name="" placeholder="password">
+      <br>
+      <label><input class="outline" type="radio" name="radio"><span>ラジオボタン</span></label>
+      <label><input class="outline" type="radio" name="radio"><span>ラジオボタン</span></label>
+      <label><input class="outline" type="checkbox" name="checkbox"><span>チェック</span></label>
+      <label><input class="outline" type="checkbox" name="checkbox"><span>チェック</span></label>
+      <input class="outline" type="reset" value="リセット">
+      <input class="outline" type="search" name="" placeholder="search">
+      <input class="outline" type="tel" name="" placeholder="tel">
+      <input class="outline" type="text" name="" placeholder="text">
+      <input class="outline" type="time" name="">
+      <br>
+      <input class="outline" type="url" name="" placeholder="url">
+      <input class="outline" type="week" name="">
+    </form>
+    <form action="">
+      <textarea class="full outline" name="" cols="30" rows="1" placeholder="textarea"></textarea>
+      <input class="outline shadow" type="submit" value="送信">
     </form>
   </div>
   <div class="ctr pri sec">
@@ -40,18 +73,53 @@
       オープンチャットを始めとした不特定多数のユーザーとのコミュニケーションに特化しています。
       開いてすぐに会話に参加できることをポリシーとし、メールアドレスやパスワードは不要。
       誰でも手軽・気軽に参加できることが特徴です。</p>
-    <button>はい</button><button>いいえ</button><button class="icon"><span class="ti-cloud-down"></span>ダウンロード</button><br>
-    <button class="shadow">はい</button><button class="shadow">いいえ</button><button class="icon shadow"><span
+    <button>はい</button><button>いいえ</button><button class="icon "><span class="ti-cloud-down"></span>ダウンロード</button><br>
+    <button class=" shadow">はい</button><button class=" shadow">いいえ</button><button class="icon  shadow"><span
         class="ti-cloud-down"></span>ダウンロード</button>
     <form>
-      <label class="btn shadow" for="fileupload">
-        <input type="file" name="" id="fileupload">
+      <input type="file" name="">
+      <label class="btn  shadow" for="fileupload">
         ファイル
       </label>
+      <input class=" shadow" type="submit" value="送信">
+      <input class=" shadow" type="button" value="ボタン">
+      <select>
+        <option>A</option>
+        <option>B</option>
+        <option>C</option>
+      </select>
+    </form>
+    <form>
+      <input type="color" name="">
+      <input type="date" name="">
+      <input type="datetime-local" name="">
+      <br>
+      <input type="email" name="" placeholder="email">
+      <input type="month" name="">
+      <input type="number" name="" placeholder="number">
+      <input type="password" name="" placeholder="password">
+      <br>
+      <label><input type="radio" name="radio"><span>ラジオボタン</span></label>
+      <label><input type="radio" name="radio"><span>ラジオボタン</span></label>
+      <label><input type="checkbox" name="checkbox"><span>チェック</span></label>
+      <label><input type="checkbox" name="checkbox"><span>チェック</span></label>
+      <input type="reset" value="リセット">
+      <input type="search" name="" placeholder="search">
+      <input type="tel" name="" placeholder="tel">
+      <input type="text" name="" placeholder="text">
+      <input type="time" name="">
+      <br>
+      <input type="url" name="" placeholder="url">
+      <input type="week" name="">
+    </form>
+    <form action="">
+      <textarea class="full" name="" placeholder="textarea"></textarea>
       <input class="shadow" type="submit" value="送信">
-      <input class="shadow" type="button" value="ボタン">
     </form>
   </div>
+
+  <script src="/js/jquery-3.5.1.slim.min.js"></script>
+  <script src="/js/stylemarin.js"></script>
 </body>
 
 </html>
