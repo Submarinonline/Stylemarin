@@ -17,6 +17,8 @@ index.htmlに
 ```
 を記述
 
+正式版以降は[releases](https://github.com/Submarinonline/Stylemarin/releases)に必要なファイルのみを配置予定
+
 ## Author
 * [山D](https://github.com/yamad-linuxer)
 * [hakunagi](https://github.com/hakunagi)
