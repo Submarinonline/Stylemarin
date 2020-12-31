@@ -5,14 +5,83 @@
   src: url(/css/fonts/GenShinGothic/GenShinGothic-Regular.ttf);
 }
 
-$color: #000000DE;
+$color: #111;
 $primaly-color: #41ADEF;
 $bg-color: #FCFCFC;
-$button-h-color: #F0F0F0;
+$bg-color-sub: #d9d9d9;
 
-$radius-circle: 1rem;
+$radius-round: 1rem;
 $radius-square: 2px;
-$radius: $radius-circle;
+$radius: $radius-round;
+
+//column
+.ctr {
+  max-width: 960px;
+  width: 100%;
+  margin: 0 auto;
+  padding: 0 1rem;
+  box-sizing: border-box;
+}
+
+.col {
+  width: 100%;
+  float: left;
+  box-sizing: border-box;
+
+  &.s1,
+  &.o {
+    //one
+    width: calc(100%/12);
+  }
+
+  &.s2 {
+    width: calc(100%/6);
+  }
+
+  &.s3,
+  &.q {
+    //quarter
+    width: calc(100%/4);
+  }
+
+  &.s4 {
+    width: calc(100%/3);
+  }
+
+  &.s5 {
+    width: calc(100%/2.4);
+  }
+
+  &.s6,
+  &.h {
+    //h
+    width: calc(100%/2);
+  }
+
+  &.s7 {
+    width: calc(100%/12*7);
+  }
+
+  &.s8 {
+    width: calc(100%/1.5);
+  }
+
+  &.s9 {
+    width: calc(100%/12*9);
+  }
+
+  &.s10 {
+    width: calc(100%/1.2);
+  }
+
+  &.s11 {
+    width: calc(100%/12*11);
+  }
+
+  &.s12 {
+    width: 100%;
+  }
+}
 
 //tag
 html {
@@ -38,7 +107,6 @@ input[type="file"]+label {
   margin: 0.5rem 0.7rem 0.5rem 0;
   outline-style: none;
   resize: none;
-  cursor: pointer;
 }
 
 button,
@@ -86,16 +154,11 @@ input:not([type="checkbox"]):not([type="radio"]),
 }
 
 @mixin buttonanime {
+  cursor: pointer;
+
+  &:hover,
   &:focus {
-    transform: scale(1.1, 1.1);
-  }
-
-  &:active {
-    transform: scale(1, 1) !important;
-  }
-
-  &:hover {
-    transform: scale(1.1, 1.1);
+    background-color: $bg-color-sub;
   }
 }
 
@@ -154,10 +217,16 @@ select {
       border: 0;
       border-radius: $bgradius;
       content: "";
-      height: calc(1rem - 4px);
-      width: calc(1rem - 4px);
+      height: calc(1rem - 6px);
+      width: calc(1rem - 6px);
+
+      &:not(.outline) {
+        height: calc(1rem - 4px);
+        width: calc(1rem - 4px);
+      }
+
       position: absolute;
-      left: 2px;
+      left: 3px;
       top: 50%;
       transform: translateY(-50%);
       transition: 0.2s ease-out;
@@ -169,8 +238,17 @@ select {
   }
 }
 
+input[type="color"] {
+  cursor: pointer;
+
+  &::-webkit-color-swatch-wrapper {
+    padding: 0;
+  }
+}
+
+
 input[type="radio"] {
-  @include radiocheckbox($radius-circle);
+  @include radiocheckbox($radius-round);
 }
 
 input[type="checkbox"] {
@@ -183,6 +261,14 @@ input[type="datetime"] {
 }
 
 //class decoration
+.square {
+  border-radius: $radius-square !important;
+}
+
+.round {
+  border-radius: $radius-round !important;
+}
+
 .shadow {
   box-shadow:
     0px 0px 15px 0 #2020A030,
@@ -214,21 +300,17 @@ label {
   }
 }
 
-.pri {
+.primal {
   color: $bg-color;
   background-color: $primaly-color;
 }
 
-//class spacer
-.ctr {
-  max-width: 960px;
-  width: 100%;
-  margin: 0 auto;
-  padding: 0 1rem;
-  box-sizing: border-box;
+.gray {
+  background-color: $bg-color-sub !important;
 }
 
-.sec {
+//class spacer
+section {
   padding-top: 0.5rem;
   padding-bottom: 0.5rem;
 }
